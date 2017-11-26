@@ -30,7 +30,7 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
                 .failureUrl("/login?error")
                 .permitAll();
 
-        http.logout().logoutSuccessUrl("/");
+        http.logout().logoutSuccessUrl("/");  //pone la ruta donde quiero q se devuelva
         http.sessionManagement().invalidSessionUrl("/");
         http.exceptionHandling().accessDeniedPage("/");
         

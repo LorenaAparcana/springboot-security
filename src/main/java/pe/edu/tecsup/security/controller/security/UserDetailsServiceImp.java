@@ -34,7 +34,7 @@ public class UserDetailsServiceImp implements UserDetailsService {
         String password = usuario.getPassword();
 
         Collection<GrantedAuthority> authorities = new ArrayList<GrantedAuthority>();
-        authorities.add(new SimpleGrantedAuthority(usuario.getRol()));
+        authorities.add(new SimpleGrantedAuthority("ROLE_"+usuario.getRol()));
         
         return new User(username, password, authorities);
     }
